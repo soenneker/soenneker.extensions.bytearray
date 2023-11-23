@@ -2,6 +2,9 @@
 
 namespace Soenneker.Extensions.ByteArray;
 
+/// <summary>
+/// A collection of various byte array extension methods
+/// </summary>
 public static class ByteArrayExtension
 {
     /// <summary>
