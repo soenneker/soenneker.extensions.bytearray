@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System;
+using System.Diagnostics.Contracts;
+using System.Text;
 
 namespace Soenneker.Extensions.ByteArray;
 
@@ -8,11 +10,19 @@ namespace Soenneker.Extensions.ByteArray;
 public static class ByteArrayExtension
 {
     /// <summary>
-    /// Shorthand for Encoding.UTF8.GetString
+    /// Shorthand for <code>Encoding.UTF8.GetString</code>
     /// </summary>
+    [Pure]
     public static string ToStr(this byte[] value)
     {
         string result = Encoding.UTF8.GetString(value);
+        return result;
+    }
+
+    [Pure]
+    public static string ToHex(this byte[] value)
+    {
+        string result = BitConverter.ToString(value).Replace("-", "");
         return result;
     }
 }
