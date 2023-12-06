@@ -8,5 +8,5 @@
 ## Installation
 
 ```
-Install-Package Soenneker.Extensions.ByteArray
+dotnet add package Soenneker.Extensions.ByteArray
 ```
